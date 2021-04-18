@@ -7,7 +7,6 @@ const shipFactory = (length) => {
   const ship = {
     length: length || '',
     hitLocations,
-    sunk: false,
      
 
     hit(number) {
@@ -19,8 +18,9 @@ const shipFactory = (length) => {
 
     isSunk() {
       if (!Object.values(this.hitLocations).includes('notHit')) {
-        this.sunk = true;
-      };
+        return true;
+      }
+      return false;
     },
   }
 

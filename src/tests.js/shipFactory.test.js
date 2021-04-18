@@ -23,14 +23,12 @@ test('hit should only accept numbers', () => {
 
 test('ships should not be sunk by default', () => {
   const testShip = shipFactory(2);
-  testShip.isSunk();
-  expect(testShip.sunk).toEqual(false);
+  expect(testShip.isSunk()).toEqual(false);
 });
 
 test('ships should be sinkable', () => {
   const testShip = shipFactory(2);
   testShip.hit(1);
   testShip.hit(2);
-  testShip.isSunk();
-  expect(testShip.sunk).toEqual(true);
+  expect(testShip.isSunk()).toEqual(true);
 });
