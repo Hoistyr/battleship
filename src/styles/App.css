@@ -93,6 +93,27 @@ html, body {
   color: white;
 }
 
+.infoChar {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
+
+.buildScreen {
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+  margin-bottom: 500px;
+}
+
+.shipSelector {
+  display: flex;
+}
+
+.ship:hover {
+  cursor: pointer;
+}
+
 .gameScreen {
   display: flex;
   flex-direction: column;
@@ -102,8 +123,9 @@ html, body {
 
 .displayBoard {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-auto-flow: column;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
   grid-gap: 1px;
   box-sizing: border-box;
 }
@@ -112,6 +134,13 @@ html, body {
   height: 50px;
   width: 50px;
   border: solid 2px rgb(184, 217, 248);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoSquare {
+  border: solid 2px transparent;
 }
 
 .boardSquare:hover {
