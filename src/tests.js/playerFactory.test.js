@@ -87,19 +87,3 @@ test('computer movesMade updates', () => {
   const prevMove = allPlayers.player2.prevMove[1];
   expect(allPlayers.player2.movesMade.length > 0).toBe(true);
 });
-
-test('computer should randomly attack if it does not have a previous move', () => {
-  const allPlayers = playerFactory('computer');
-  allPlayers.player1.gameBoard.placeShip('a', 1, 'down', 3);
-  allPlayers.player2.gameBoard.placeShip('b', 1, 'down', 3);
-
-  allPlayers.player2.takeTurn();
-  allPlayers.player2.takeTurn();
-  allPlayers.player2.takeTurn();
-  allPlayers.player2.takeTurn();
-  allPlayers.player2.takeTurn();
-  allPlayers.player2.takeTurn();
-  allPlayers.player2.takeTurn();
-  allPlayers.player2.takeTurn();
-  expect(allPlayers.player1).toBe(true);
-});

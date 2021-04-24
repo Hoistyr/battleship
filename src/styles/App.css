@@ -1,0 +1,119 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  background: rgb(0,51,72);
+  background: linear-gradient(0deg, rgba(0,51,72,1) 0%, rgba(0,69,97,1) 25%, rgba(0,105,148,1) 50%, rgba(0,141,199,1) 83%, rgba(0,159,225,1) 100%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+}
+
+.homeScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameTitle {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  font-size: 4rem;
+}
+
+.opponentSelectionDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.selectorIcon {
+  margin: 10px;
+  padding: 10px;
+}
+
+.versusText {
+  color: white;
+  font-size: 5rem;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.opponentSelected {
+   border: solid 4px white;
+   border-radius: 25px;
+}
+
+.opponentUnselected {
+  border: solid 4px transparent;
+}
+
+.opponentUnselected:hover {
+  border: solid 4px rgba(255, 255, 255, 0.411);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+.startButton {
+  background-color: #003348;
+  height: 100px;
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.startButton:hover {
+  cursor: pointer;
+  background-color: #002c3f;
+}
+
+.buttonText {
+  color: white;
+}
+
+.gameScreen {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: 500px;
+}
+
+.displayBoard {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-gap: 1px;
+  box-sizing: border-box;
+}
+
+.boardSquare {
+  height: 50px;
+  width: 50px;
+  border: solid 2px rgb(184, 217, 248);
+}
+
+.boardSquare:hover {
+  cursor: pointer;
+}

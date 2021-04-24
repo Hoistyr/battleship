@@ -103,7 +103,6 @@ const computerTakeTurn = (opBoard, prevMove, hitMove, movesMade) => {
 
     let tries = [];
     colChoiceArray.forEach((tryCol) => {
-      console.log(row);
       console.log(colChoiceArray);
       // Doesn't add moves already made to the possible tries
       if (movesMade.includes(tryCol + row)) {

@@ -76,7 +76,6 @@ const gameboardFactory = () => {
       this.squares = squaresWithNewShip;
     },
     receiveAttack(column, row) {
-      console.log('column, row receiveAttack: ', column + row);
       const squaresWithAttack = {...this.squares};
       if (squaresWithAttack[column][row].ship === null) {
         squaresWithAttack[column][row].attackType = 'miss';
